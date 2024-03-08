@@ -40,17 +40,17 @@ for old_object in old_objects:
                 SR.source.append(new_object)
                 SR.destination.append(new_object)
                 SR.apply()
-                print("{dg},{SR},{old_object},{new_object},Source and Destination", file = output_file)
+                print(f"{dg},{SR},{old_object},{new_object},Source and Destination", file = output_file)
                 output_file.flush()
             elif old_object in SR.source and new_object not in SR.source:
                 SR.source.append(new_object)
                 SR.apply()
-                print("{dg},{SR},{old_object},{new_object},Source", file = output_file)
+                print(f"{dg},{SR},{old_object},{new_object},Source", file = output_file)
                 output_file.flush()
             elif old_object in SR.destination and new_object not in SR.destination:
                 SR.destination.append(new_object)
                 SR.apply()
-                print("{dg},{SR},{old_object},{new_object},Destination", file = output_file)
+                print(f"{dg},{SR},{old_object},{new_object},Destination", file = output_file)
                 output_file.flush()
             else:
                 continue
